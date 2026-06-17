@@ -11,6 +11,13 @@ A sleek, modern, mobile-responsive project and task management system built usin
 | **Database** | PostgreSQL via Supabase, Prisma ORM |
 | **Containerization** | Docker, Docker Compose (optional) |
 
+## Project Documentation
+
+For judges and reviewers, please refer to the following architectural and API documentation files located in the root of the project:
+
+- [**Database Schema & ER Diagram**](./Database_Schema.md) - Contains the Mermaid.js ER diagram mapping the `User`, `Project`, and `Task` relationships, as well as the Prisma models configuration.
+- [**API Documentation**](./API_Documentation.md) - Contains a comprehensive guide to all available backend endpoints, their required payloads, and expected responses.
+
 ---
 
 ## Prerequisites

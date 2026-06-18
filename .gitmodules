@@ -1,0 +1,6 @@
+[submodule "ISMO Project/ISMO-backend"]
+	path = ISMO Project/ISMO-backend
+	url = https://github.com/Suryaraja1586/ISMO-backend.git
+[submodule "ISMO Project/ISMO-frontend"]
+	path = ISMO Project/ISMO-frontend
+	url = https://github.com/Suryaraja1586/ISMO-frontend.git

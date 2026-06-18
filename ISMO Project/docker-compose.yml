@@ -13,7 +13,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d ismo_pm"]
+      test: [ "CMD-SHELL", "pg_isready -U postgres -d ismo_pm" ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -21,7 +21,7 @@ services:
   # ── Express Backend API ────────────────────────────────────────────────────
   backend:
     build:
-      context: ./backend
+      context: ./ISMO-backend
       dockerfile: Dockerfile
     container_name: ismo_pm_backend
     restart: unless-stopped
@@ -35,12 +35,12 @@ services:
       NODE_ENV: production
     depends_on:
       db:
-        condition: service_healthy  # waits until DB passes health check
+        condition: service_healthy # waits until DB passes health check
 
   # ── Next.js Frontend ───────────────────────────────────────────────────────
   frontend:
     build:
-      context: ./frontend
+      context: ./ISMO-frontend
       dockerfile: Dockerfile
       args:
         - NEXT_PUBLIC_API_URL=http://localhost:5000/api

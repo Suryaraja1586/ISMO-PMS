@@ -37,6 +37,14 @@ git clone <your-repo-url>
 cd "ISMO Project"
 ```
 
+**Important:** This project uses Git submodules for the frontend and backend. After cloning the main repository, you **must** pull the submodules to get the complete code. Run the following command:
+
+```bash
+git submodule update --init --recursive
+```
+
+Please take a moment to observe the project structure outlined at the bottom of this README to understand how the submodules are integrated before proceeding.
+
 ### Step 2 — Create Your Supabase Database
 
 > **Every developer needs their own Supabase project** (each has their own isolated database).
